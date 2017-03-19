@@ -29,6 +29,8 @@ endfunction(my_install)
 
 set(LIBRARY_INSTALL_DIR ${CMAKE_HOME_DIRECTORY}/lib)
 message(STATUS "LIBRARY INSTALL DIR: ${LIBRARY_INSTALL_DIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIBRARY_INSTALL_DIR}) # dynamic
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_INSTALL_DIR}) # static
 
 include(TestBigEndian)
 include(CheckFunctionExists)
@@ -257,10 +259,7 @@ endif()
 
 #add_compiler_flags(${LIBCDP_CFLAGS} TARGETS ${CDPLIB})
 
-if (UNIX)
-  add_subdirectory(libaaio)
-endif()
-
+add_subdirectory(third_party)
 add_subdirectory(dev)
 
 # # uninstall target
