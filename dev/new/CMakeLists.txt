@@ -6,11 +6,11 @@ else()
     set(CMAKE_C_FLAGS "-O2 -Wall -DWIN32")
   else()
     set(CMAKE_C_FLAGS "-O2 -Wall -Dlinux -Dunix")
-	find_library(AAIOLIB names libaaio.a paths /usr/local/lib)
+	find_library(AAIOLIB names libaaio.a paths ${LIBRARY_INSTALL_DIR})
   endif()
 endif()
 #RWD only need this for APPLE, Linux
-#find_library(AAIOLIB names libaaio.a paths /usr/local/lib)
+#find_library(AAIOLIB names libaaio.a paths ${LIBRARY_INSTALL_DIR})
 
 link_directories(../cdp2k ../sfsys)
 
