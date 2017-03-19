@@ -7,7 +7,7 @@ if(APPLE)
   find_library(AULIB AudioUnit)
   find_library(CARBONLIB Carbon)
   #RWD only need this for APPLE?
-  find_library(AAIOLIB names libaaio.a paths ${LIBRARY_INSTALL_DIR})
+  find_library(AAIOLIB NAMES libaaio.a PATHS ${LIBRARY_INSTALL_DIR} NO_DEFAULT_PATH)
   set(EXTRA_LIBRARIES1 pthread ${AAIOLIB} ${COREAUDIOLIB} ${AUDIOTOOLBOX} ${AULIB} ${CARBONLIB} ${EXTRA_LIBRARIES})
 else()
   if(MINGW)

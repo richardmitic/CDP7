@@ -1,16 +1,13 @@
- if(APPLE)
+if(APPLE)
   set(CMAKE_C_FLAGS "-O2 -Wall -mmacosx-version-min=10.5  -arch i386 -Dunix")
-  
+  find_library(AAIOLIB NAMES libaaio.a PATHS ${LIBRARY_INSTALL_DIR} NO_DEFAULT_PATH)
 else()
   if(MINGW)
     set(CMAKE_C_FLAGS "-O2 -Wall -DWIN32")
   else()
     set(CMAKE_C_FLAGS "-O2 -Wall -Dlinux -Dunix")
-	find_library(AAIOLIB names libaaio.a paths ${LIBRARY_INSTALL_DIR})
   endif()
 endif()
-#RWD only need this for APPLE, Linux
-#find_library(AAIOLIB names libaaio.a paths ${LIBRARY_INSTALL_DIR})
 
 link_directories(../cdp2k ../sfsys)
 
