@@ -8,6 +8,8 @@
 # libraries and executables
 /lib*.*/
 .libs
+/lib
+/libaaio/libaaio-0.3.1
 /bin
 *.exe
 Release
