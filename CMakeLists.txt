@@ -27,7 +27,7 @@ function(my_install name)
 endfunction(my_install)
 
 
-set(LIBRARY_INSTALL_DIR "lib")
+set(LIBRARY_INSTALL_DIR ${CMAKE_HOME_DIRECTORY}/lib)
 message(STATUS "LIBRARY INSTALL DIR: ${LIBRARY_INSTALL_DIR}")
 
 include(TestBigEndian)
@@ -38,6 +38,7 @@ include(CheckLibraryExists)
 include(CMakeParseArguments)
 include(CheckCCompilerFlag)
 include(CheckCXXCompilerFlag)
+include(ExternalProject)
 
 # If FAIL_MISSING is true and the dependencies are not fulfilled,
 # it will abort the cmake run.
@@ -250,6 +251,10 @@ if(WIN32)
 endif()
 
 #add_compiler_flags(${LIBCDP_CFLAGS} TARGETS ${CDPLIB})
+
+if (UNIX)
+  add_subdirectory(libaaio)
+endif()
 
 add_subdirectory(dev)
 
