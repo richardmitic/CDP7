@@ -3,6 +3,6 @@ add_subdirectory(fastconv)
 add_subdirectory(reverb)
 add_subdirectory(mctools)
 
-if(USE_LOCAL_PORTAUDIO)
+if(BUILD_PAPROGS)
   add_subdirectory(paprogs)
 endif()

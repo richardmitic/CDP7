@@ -84,6 +84,8 @@ if(APPLE AND FAT_BINARIES)
   set(CMAKE_OSX_ARCHITECTURES "x86_64;i386")
 endif()
 
+option(BUILD_PAPROGS "Build programs that require portaudio" ON)
+
 if(APPLE)
   set(OSX_VERSION " ")
 endif()
