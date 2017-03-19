@@ -77,6 +77,11 @@ if(USE_COMPILER_OPTIMIZATIONS)
   include(cmake/CompilerOptimizations.cmake)
 endif()
 
+option(FAT_BINARIES "Compile both x86_64 and i386 platforms on OS X" ON)
+if(APPLE AND FAT_BINARIES)
+  set(CMAKE_OSX_ARCHITECTURES "x86_64;i386")
+endif()
+
 if(APPLE)
   set(OSX_VERSION " ")
 endif()
