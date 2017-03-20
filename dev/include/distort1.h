@@ -22,6 +22,10 @@
  *
  */
 
+#ifndef _DISTORT1_H
+#define _DISTORT1_H
+
+#include <structures.h>
 
 
 /* floatsam version*/
@@ -84,3 +88,5 @@ int		preprocess_pulse(dataptr dz);
 int		do_pulsetrain(dataptr dz);
 int 	distort_rpt_frqlim(int *current_buf,int initial_phase,int *obufpos,int *current_pos_in_buf,int *cnt,
 				int cyclecnt,dataptr dz);
+
+#endif // _DISTORT_H

@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _DISTORT_H
+#define _DISTORT_H
 
 #define IS_GROUCHO_COMPILE		(1)
 
@@ -30,3 +31,7 @@
 #include	<flags.h>
 #include	<distcon.h>
 #include	<distort1.h>
+
+int distort_main(int argc,char *argv[]);
+
+#endif // _DISTORT_H

@@ -22,6 +22,8 @@
  *
  */
 
+ #ifndef _DISTCON_H
+ #define _DISTCON_H
 
 
 /************************ DISTORT *************************/
@@ -68,3 +70,5 @@
 #define	DISTORTE_MAX_EXPON		(50.0)
 #define DISTORTH_MAX_PRESCALE	(200.0)
 #define CYCLIM_DFLTFRQ	(1000.0)
+
+#endif // _DISTCON_H
