@@ -31,6 +31,7 @@
 #ifndef  _STRUCTURES_H_INCLUDED
 #define  _STRUCTURES_H_INCLUDED
 
+#include <stdio.h>  /* for FILE */
 #include <sfsys.h>  /* for CHPEAK */
 
 struct hhead {
