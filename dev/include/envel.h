@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _ENVEL_H
+#define _ENVEL_H
 
 #define IS_GROUCHO_COMPILE		(1)
 
@@ -33,3 +34,7 @@
 
 /*RWD try to replace/lose all SECSIZE stuff in time! */
 #define ENV_FSECSIZE (256)
+
+int envel_main(int argc, char *argv[]);
+
+#endif // _ENVEL_H

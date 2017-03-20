@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _ENVEL1_H
+#define _ENVEL1_H
 
 int 	process_envelope(dataptr dz);
 //int 	setup_envel_windowsize(dataptr dz);
@@ -46,3 +47,5 @@ int 	envelope_tremol(dataptr dz);
 int  	generate_samp_windowsize(fileptr thisfile,dataptr dz);
 int		do_grids(dataptr dz);
 int		envsyn(dataptr dz);	/*TW March 2004 */
+
+#endif // _ENVEL1_H

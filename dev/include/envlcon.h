@@ -22,7 +22,8 @@
  *
  */
 
-
+ #ifndef _ENVLCON_H
+ #define _ENVLCON_H
 
 /*************************** ENVELOPE *************************/
 
@@ -100,3 +101,5 @@
 #define ENV_MAX_WSIZE		 	(10000.0)	/* MSECS */
 
 #define MAX_PEAK_SEPARATION		(32767)		/* Arbitrary */
+
+#endif // _ENVLCON_H
