@@ -98,7 +98,7 @@ int sloombatch = 0;
 const char* cdp_version = "6.2.0";
 /******************************* MAIN/CDPARAMS *******************************/
 
-int main(int argc, char *argv[])
+int cdparams_main(int argc, char *argv[])
 {
 	int 	exit_status;
 	int 	process, mode, channels;

@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _CDPARAMS_H
+#define _CDPARAMS_H
 
+#include "structures.h"
 
 /* floats version */
 #define CHECKBUTTON	 		(0)
@@ -50,11 +53,7 @@
 #define LOGNUMERIC			(23)
 #define FILE_OR_VOWELS		(24)
 
-/*GNU doesn't like duplcate definitions */
-#ifndef _STRUCTURES_H_INCLUDED
-#error cdparams.h: requires structures.h
-#endif
-//typedef struct applic *aplptr;
+
 int  cdparams(int process,int mode,int filetype,int infilesize,int insams,int srate,
 		int channels,int wanted,int wlength,int linecnt,float arate,float frametime,
 		double nyquist,double duration);
@@ -77,3 +76,6 @@ int  setup_flagnames(int process,int mode,int bare_flags,aplptr ap);
 void mp_message(int process,int mode);
 int  establish_display(int process,int mode,int total_params,float frametime,double duration,aplptr ap);
 
+int cdparams_main(int argc, char *argv[]);
+
+#endif // _CDPARAMS_H
