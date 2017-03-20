@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _COMBINE_H
+#define _COMBINE_H
 
+#include "structures.h"
 
 #define IS_SPEC_COMPILE		(1)
 
@@ -34,3 +37,7 @@ int  specmax(dataptr dz);
 int  specmean(dataptr dz);
 int  speccross(dataptr dz);
 int  specmake2(dataptr dz);
+
+int combine_main(int argc, char *argv[]);
+
+#endif // _COMBINE_H
