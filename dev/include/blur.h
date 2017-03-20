@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _BLUR_H
+#define _BLUR_H
 
+#include "structures.h"
 
 #define IS_SPEC_COMPILE		(1)
 
@@ -37,4 +40,6 @@ int  specdrunk(dataptr dz);
 int  specshuffle(dataptr dz);
 int  specweave(dataptr dz);
 
+int blur_main(int argc, char *argv[]);
 
+#endif // _BLUR_H

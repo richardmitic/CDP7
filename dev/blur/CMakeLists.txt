@@ -12,7 +12,10 @@ link_directories(../cdp2k ../sfsys)
 
 include_directories(../../include)
 
-add_executable(blur main.c ap_blur.c blur.c)
+add_library(cdpblur ap_blur.c blur.c blur_main.c)
+target_link_libraries(cdpblur cdp2k sfsys ${EXTRA_LIBRARIES})
 
-target_link_libraries(blur cdp2k sfsys ${EXTRA_LIBRARIES})
+add_executable(blur main.c)
+target_link_libraries(blur cdpblur)
+
 my_install(blur)
