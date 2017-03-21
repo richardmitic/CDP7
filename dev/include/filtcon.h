@@ -22,7 +22,8 @@
  *
  */
 
-
+ #ifndef _FILTCON_H
+ #define _FILTCON_H
 
 /***************************** FILTERS ******************************/
 
@@ -123,3 +124,4 @@
 
 #define FLT_TAIL					(20.0)	/* 1 second allowed for filter to die to zero */
 
+#endif // _FILTCON_H

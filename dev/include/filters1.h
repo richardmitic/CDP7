@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _FILTERS1_H
+#define _FILTERS1_H
 
+#include "structures.h"
 
 /* GLOBAL */
 
@@ -36,3 +39,5 @@ int 	iterating_filter(dataptr dz);
 int 	allocate_filter_frq_amp_arrays(int fltcnt,dataptr dz);
 int		make_vfilt_data(dataptr dz);						   /* TW March 2004	 */
 int		newfval2(double *fbrk,double *hbrk,dataptr dz);
+
+#endif // _FILTERS1_H

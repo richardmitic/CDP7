@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _FILTERS_H
+#define _FILTERS_H
 
 #define IS_GROUCHO_COMPILE		(1)
 
@@ -30,3 +31,7 @@
 #include	<flags.h>
 #include	<filtcon.h>
 #include	<filters1.h>
+
+int filter_main(int argc, char *argv[]);
+
+#endif // _FILTERS_H
