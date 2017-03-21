@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _EXTEND_H
+#define _EXTEND_H
 
 #define IS_GROUCHO_COMPILE		(1)
 
@@ -30,3 +31,7 @@
 #include	<flags.h>
 #include	<extdcon.h>
 #include	<extend1.h>
+
+int extend_main(int argc, char *argv[]);
+
+#endif // _EXTEND_H

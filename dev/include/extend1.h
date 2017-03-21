@@ -22,13 +22,15 @@
  *
  */
 
+#ifndef _EXTEND1_H
+#define _EXTEND1_H
 
+#include "structures.h"
 
 /*
  *	2nd header for EXTEND group of sndprgs - graphics compatible version - FUNCTIONS
  */
 
-#define EXTEND1_H_RCSID "$Id$"
 /*
  * $Log$
  */
@@ -50,3 +52,5 @@ int		do_btob(dataptr dz);
 /*TW March 2004 */
 int		do_doubling(dataptr dz);
 int		extend_by_insplice(dataptr dz);
+
+#endif // _EXTEND1_H

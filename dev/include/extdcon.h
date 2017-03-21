@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _EXTDCON_H
+#define _EXTDCON_H
 
 /******************************** EXTEND ******************************/
 
@@ -66,3 +67,4 @@
 
 #define ITERATE_EXTEND_BUFSIZE (512 * 512)
 
+#endif // _EXTDCON_H
