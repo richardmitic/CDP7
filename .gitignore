@@ -30,3 +30,8 @@ CTestTestfile.cmake
 /CMakeCache.txt
 Custom.cmake
 build/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
