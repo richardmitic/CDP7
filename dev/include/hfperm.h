@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _HFPERM_H
+#define _HFPERM_H
 
+#include "structures.h"
 
 #define MAX_HFPERMSET (48.0)
 #define HFP_OUTLEVEL (0.8)
@@ -46,3 +49,7 @@ int do_hfperm(dataptr dz);
 #define OTHER_SORT	(1)	/* for ROOT & TOP, sort by INTSTAK : for PCLASS, sort by MAXINT then DENSITY */
 
 int gen_dp_output(dataptr dz);
+
+int hfperm_main(int argc,char *argv[]);
+
+#endif // _HFPERM_H
