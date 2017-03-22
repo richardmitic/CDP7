@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _FOCUS_H
+#define _FOCUS_H
 
+#include "structures.h"
 
 #define IS_SPEC_COMPILE		(1)
 
@@ -35,4 +38,4 @@ int  specfreeze(dataptr dz);
 int  specfreeze2(dataptr dz);
 int  specstep(dataptr dz);
 
-
+#endif // _FOCUS_H

@@ -1,5 +1,5 @@
 if(APPLE)
-  set(CMAKE_C_FLAGS "-O2 -Wall -mmacosx-version-min=10.5  -arch i386 -Dunix")
+  set(CMAKE_C_FLAGS "-O2 -Wall -mmacosx-version-min=10.5 -Dunix")
 else()
   if(MINGW)
     set(CMAKE_C_FLAGS "-O2 -Wall -DWIN32")
@@ -12,9 +12,11 @@ link_directories(../cdp2k ../sfsys)
 
 include_directories(../../include)
 
-add_executable(focus main.c ap_focus.c focus.c)
+add_library(focus-lib focus_main.c ap_focus.c focus.c)
+target_link_libraries(focus-lib cdp2k sfsys ${EXTRA_LIBRARIES})
 
-target_link_libraries(focus cdp2k sfsys ${EXTRA_LIBRARIES})
+add_executable(focus main.c)
+target_link_libraries(focus focus-lib)
 
 my_install(focus)
 
