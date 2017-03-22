@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _GRAIN1_H
+#define _GRAIN1_H
 
+#include "structures.h"
 
 /* GRAIN1.H */
 /*RWD 6:2001 purged decls of local statics */
@@ -43,3 +46,5 @@ int  timestretch_iterative2(dataptr dz);
 int  timestretch_iterative3(dataptr dz);
 int  grab_noise_and_expand(dataptr dz);
 int	 grev(dataptr dz);
+
+#endif // _GRAIN1_H

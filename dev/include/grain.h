@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _GRAIN_H
+#define _GRAIN_H
 
 #define IS_GROUCHO_COMPILE		(1)
 
@@ -30,3 +31,7 @@
 #include	<flags.h>
 #include	<graicon.h>
 #include	<grain1.h>
+
+int grain_main(int argc, char *argv[]);
+
+#endif // _GRAIN_H

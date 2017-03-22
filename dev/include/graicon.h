@@ -22,7 +22,8 @@
  *
  */
 
-
+#ifndef _GRAICON_H
+#define _GRAICON_H
 
 /*********************************** GRAIN ********************************/
 
@@ -46,3 +47,5 @@
 
 #define NOIS_MIN_FRQ	(6000.0)
 #define GR_MINDUR        (0.1)
+
+#endif // _GRAICON_H
