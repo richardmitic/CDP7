@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _FORMANTS_H
+#define _FORMANTS_H
 
+#include "structures.h"
 
 /* FORMANT PARAMS */
 #define	FREQWISE_FORMANTS			(0)
@@ -50,3 +53,7 @@ int  getspecenvamp(double *thisamp,double thisfrq,int storeno,dataptr dz);
 int  extract_specenv_over_partials(int *specenvcnt,double thispitch,int bufptr_no,dataptr dz);
 int  setup_formant_params(int fd,dataptr dz);
 void print_formant_params_to_screen(dataptr dz);
+
+int formants_main(int argc, char *argv[]);
+
+#endif // _FORMANTS_H

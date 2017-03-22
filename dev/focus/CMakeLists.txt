@@ -13,6 +13,7 @@ link_directories(../cdp2k ../sfsys)
 include_directories(../../include)
 
 add_library(focus-lib focus_main.c ap_focus.c focus.c)
+set_target_properties(focus-lib PROPERTIES OUTPUT_NAME focus)
 target_link_libraries(focus-lib cdp2k sfsys ${EXTRA_LIBRARIES})
 
 add_executable(focus main.c)

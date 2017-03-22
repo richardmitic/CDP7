@@ -12,9 +12,12 @@ link_directories(../cdp2k ../sfsys)
 
 include_directories(../../include)
 
-add_executable(formants main.c ap_formants.c formants.c)
+add_library(formants-lib formants_main.c ap_formants.c formants.c)
+set_target_properties(formants-lib PROPERTIES OUTPUT_NAME formants)
+target_link_libraries(formants-lib cdp2k sfsys ${EXTRA_LIBRARIES})
 
-target_link_libraries(formants cdp2k sfsys ${EXTRA_LIBRARIES})
+add_executable(formants main.c)
+target_link_libraries(formants formants-lib)
 
 my_install(formants)
 
