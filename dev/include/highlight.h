@@ -22,7 +22,10 @@
  *
  */
 
+#ifndef _HIGHLIGHT_H
+#define _HIGHLIGHT_H
 
+#include "structures.h"
 
 #define IS_SPEC_COMPILE		(1)
 
@@ -33,3 +36,7 @@ int  specarpe(int *in_start_portion,dataptr dz);
 int  specpluck(dataptr dz);
 int  spectrace(dataptr dz);
 int  vowel_filter(dataptr dz);
+
+int hilite_main(int argc, char *argv[]);
+
+#endif // _HIGHLIGHT_H
